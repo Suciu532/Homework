@@ -93,3 +93,22 @@ function calculateAverageSalary(employees) {
     return sum / count;
 }
 calculateAverageSalary(employees);
+
+function calculateAverageSalary(employees) {
+    var sum = 0;
+    var count = 0;
+    employees.forEach(employee => {
+        if (employee.gender == 'Female') {
+            count = count + 1;
+        }
+    })
+    console.error('Numarul de angajati este: ', count);
+    employees.forEach(employee => {
+        if (employee.gender == "Female") {
+            sum = sum + Number(employee.salary);
+            console.warn("Suma este: ", sum);
+        }
+    });
+    return sum / count;
+}
+calculateAverageSalary(employees);
