@@ -80,5 +80,16 @@ function collectFirstName(employees) {
     });
     return firstNames;
 }
-
 collectFirstName(employees);
+
+function calculateAverageSalary(employees) {
+    var sum = 0;
+    var count = Object.keys(employees).length;
+    console.error('Numarul de angajati este: ', count);
+    employees.forEach(employee => {
+        sum = sum + Number(employee.salary);
+        console.warn("Suma este: ", sum);
+    });
+    return sum / count;
+}
+calculateAverageSalary(employees);
