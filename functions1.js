@@ -90,3 +90,48 @@ function galileoGalilei() {
     return nume;
 }
 console.info(galileoGalilei());
+
+// function sumaAnilor() {
+//     console.log("aaa")
+//     const reducer = (previousValue, currentValue) => {
+//         console.log("values", previousValue, currentValue)
+//         return previousValue.year + currentValue.year;
+//     }
+
+//     return inventors.reduce(reducer);
+// }
+
+// console.info(sumaAnilor());
+
+function compare(a, b) {
+    if (a.year < b.year) {
+        return -1;
+    }
+    if (a.year > b.year) {
+        return 1;
+    }
+    return 0;
+}
+
+inventors.sort(compare);
+console.info(inventors);
+
+bulevards = [
+    "Boulevard de l'Amiral-Bruix",
+    "City walls of Paris",
+    "Boulevards of Paris",
+    "Boulevard des Capucines",
+    "Boulevard de la Chapelle",
+]
+
+function WordsDe() {
+    const substring = "de";
+    const buleverde = [];
+    bulevards.forEach(b => {
+        if (b.includes(substring))
+            buleverde.push(b);
+    })
+    return buleverde;
+}
+
+console.info(WordsDe());
