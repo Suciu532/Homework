@@ -1,4 +1,4 @@
-var employees = [{
+var employees = [ {
     id: 1,
     firstName: "Solly",
     lastName: "Coon",
@@ -68,7 +68,7 @@ var employees = [{
     email: "icrennan9@microsoft.com",
     gender: "Male",
     salary: "668.98"
-}];
+} ];
 
 function collectFirstName(employees) {
     console.info("employees: ", employees);
@@ -80,7 +80,8 @@ function collectFirstName(employees) {
     });
     return firstNames;
 }
-collectFirstName(employees);
+var names = collectFirstName(employees);
+console.warn("names ", names);
 
 function calculateAverageSalary(employees) {
     var sum = 0;
@@ -93,6 +94,7 @@ function calculateAverageSalary(employees) {
     return sum / count;
 }
 calculateAverageSalary(employees);
+
 
 function calculateAverageSalary(employees) {
     var sum = 0;
@@ -112,3 +114,48 @@ function calculateAverageSalary(employees) {
     return sum / count;
 }
 calculateAverageSalary(employees);
+
+function sliptEmployees1() {
+    const a = [];
+    const b = [];
+    console.log(employees);
+    employees.forEach(employee => {
+        if (employee.gender === "Female") {
+            a.push(employee.firstName);
+        } else {
+            b.push(employee.firstName);
+        }
+    });
+    return [ a, b ];
+}
+
+console.info(sliptEmployees1());
+
+function splitEmployees2() {
+    const males = employees.filter(employee => employee.gender === "Male");
+    const females = employees.filter(employee => employee.gender === "Female");
+    return [ males, females ];
+}
+console.log("pentru functia 2: ")
+console.info(splitEmployees2());
+
+const obj = {};
+obj[ 'male' ] = {
+    first: 'name'
+};
+console.log(obj[ 'male' ]);
+
+function convertArray() {
+    const obj = {};
+    employees.forEach(emp => obj[ emp.lastName ] = emp);
+    return obj;
+}
+console.log("Convert array: ")
+console.info(convertArray());
+
+
+
+
+
+
+
