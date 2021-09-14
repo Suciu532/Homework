@@ -80,3 +80,13 @@ function returnNames() {
 }
 console.info(returnNames());
 
+function galileoGalilei() {
+    let nume;
+    inventors.forEach(i => {
+        if (i.first === "Galileo" && i.last === "Galilei") {
+            nume = i;
+        }
+    })
+    return nume;
+}
+console.info(galileoGalilei());
