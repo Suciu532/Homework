@@ -82,26 +82,33 @@ console.info(returnNames());
 
 function galileoGalilei() {
     let nume;
-    inventors.forEach(i => {
+    inventors.forEach((i, index) => {
         if (i.first === "Galileo" && i.last === "Galilei") {
             nume = i;
         }
     })
-    return nume;
+    return [ nume, index ];
 }
 console.info(galileoGalilei());
 
-// function sumaAnilor() {
-//     console.log("aaa")
-//     const reducer = (previousValue, currentValue) => {
-//         console.log("values", previousValue, currentValue)
-//         return previousValue.year + currentValue.year;
-//     }
+//TODO pure functions 
+function sumaAnilor() {
+    // const reducer = (suma, i) => {
+    //     console.log("values", suma, i)
+    //     return suma + (i.passed - i.year);
+    // }
 
-//     return inventors.reduce(reducer);
-// }
+    // return inventors.reduce((suma, i) => {
+    //     console.log("values", suma, i)
+    //     return suma + (i.passed - i.year);
+    // }, 0);
 
-// console.info(sumaAnilor());
+    return inventors.reduce((suma, i) =>
+        suma + (i.passed - i.year)
+        , 0);
+}
+
+console.info(sumaAnilor());
 
 function compare(a, b) {
     if (a.year < b.year) {
