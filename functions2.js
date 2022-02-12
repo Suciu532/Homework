@@ -64,19 +64,5 @@ function findAndDelete() {
 
 console.info(findAndDelete());
 
-// document.body.innerHTML += [
-//     '<article id="q11result">',
-//     '<div id="x">X</div>',
-//     '<div name="y">Y</div>',
-//     "</article>"
-// ].join("");
-// var e1 = document.getElementById("x");
-// e1.innerHTML = "A";
-// var e2 = document.getElementsByName("y");
-// console.log("elemntul e2 este: ", e2.innerText);
-// e2.innerHTML = "B";
-// console.log("elemntul e2 este: ", e2);
-
-// console.info(document.getElementById("q11result").innerText);
 
  
