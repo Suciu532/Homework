@@ -315,11 +315,40 @@ console.log(users2);
 //     ...
 // }
 
-const beers = users.map((u) => {
+// const beers = users.map((u) => {
+//   let t = 0,
+//     c = 0,
+//     h = 0,
+//     n = 0;
+//   users.forEach((u) => {
+//     if (u.favoriteBeer == "Tuborg") {
+//       t++;
+//     }
+//     if (u.favoriteBeer == "Heineken") {
+//       h++;
+//     }
+//     if (u.favoriteBeer == "Ciucas") {
+//       c++;
+//     }
+//     if (u.favoriteBeer == "Nenea Iancu") {
+//       n++;
+//     }
+//   });
+//   return {
+//     tuborg: t,
+//     ciucas: c,
+//     heineken: h,
+//     neneaiancu: n,
+//   };
+// });
+
+// console.log(beers);
+
+const l = () => {
   let t = 0,
     c = 0,
     h = 0,
-    n = 0;
+    ni = 0;
   users.forEach((u) => {
     if (u.favoriteBeer == "Tuborg") {
       t++;
@@ -331,15 +360,17 @@ const beers = users.map((u) => {
       c++;
     }
     if (u.favoriteBeer == "Nenea Iancu") {
-      n++;
+      ni++;
     }
   });
-  return {
-    tuborg: t,
-    ciucas: c,
-    heineken: h,
-    neneaiancu: n,
-  };
-});
+  const beers = new Map();
 
-console.log(beers);
+  beers.set("tuborg", t);
+  beers.set("ciucas", c);
+  beers.set("heineken", h);
+  beers.set("neneaiancu", ni);
+
+  return beers;
+};
+
+console.log(l());
